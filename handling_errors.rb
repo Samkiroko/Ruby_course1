@@ -1,25 +1,14 @@
 # frozen_string_literal: true
 
-# Ruby program to create the user
-# defined exception and handling it
-
-# defining a method
-def raise_and_rescue
-  begin
-  puts 'This is Before Exception Arise!'
-
-  # using raise to create an exception
-  raise 'Exception Created!'
-
-  puts 'After Exception'
-
-  # using Rescue method
-  rescue StandardError
-    puts 'Finally Saved!'
+begin
+  # puts bad_variable
+  num = 10 / 0
+rescue ZeroDivisionError
+  puts 'Error'
+rescue StandardError
+  puts 'All other errors'
 end
 
-  puts 'Outside from Begin Block!'
-end
+# or raise an exception
 
-# calling method
-raise_and_rescue
+raise 'Made Up Exception'
